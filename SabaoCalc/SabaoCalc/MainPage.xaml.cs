@@ -7,8 +7,12 @@ using Xamarin.Forms;
 
 namespace SabaoCalc {
     public partial class MainPage : ContentPage {
+        private readonly Formula _formula;
+
         public MainPage() {
             InitializeComponent();
+            _formula = new Formula();
+            BindingContext = _formula;
         }
     }
 }

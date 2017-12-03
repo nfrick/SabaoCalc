@@ -4,10 +4,23 @@
              xmlns:local="clr-namespace:SabaoCalc"
              x:Class="SabaoCalc.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout  Margin="10" VerticalOptions="Center">
+            <Slider x:Name="SliderOleo"
+                    Value="{Binding Oleo}"
+                    Maximum="20"></Slider>
+
+            <Label x:Name="LabelOleo"
+                    HorizontalOptions="Center"
+                    Text="{Binding Oleo, Mode=OneWay, StringFormat='Óleo: {0:F2} litros'}" />
+
+            <Label x:Name="LabelAgua"
+                   HorizontalOptions="Center"
+                    Text="{Binding Agua, Mode=OneWay, StringFormat='Água: {0:F2} litros'}" />
+
+            <Label x:Name="LabelSoda"
+                   HorizontalOptions="Center"
+                Text="{Binding Soda, Mode=OneWay, StringFormat='Soda: {0:F2} kg'}" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
